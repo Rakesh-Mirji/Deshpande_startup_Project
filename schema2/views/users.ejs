@@ -1,0 +1,60 @@
+
+<%- include("header") -%>
+
+<%  newListItems.map(function(pet){ %>
+  <% id=pet._id %>
+  <% name=pet.name %>
+  <% email=pet.email %>
+  <% }) %>
+<p class="owner">owner ID :<%=id%> </p>
+<p class="owner">Name : <%=name%></p>
+<p class="owner">email : <%=email%></p>
+<%console.log(ownerList)%>
+
+
+
+
+  <table class="table">
+    <tr>
+      <th>id</th><th>name</th><th>species</th><th>Breed</th><th>DOB</th><th>address</th>
+    </tr>
+    <%  newListItems.forEach(function(pet){ %>
+      <%console.log(pet.email)%>
+    <form action="/delete" method="post">
+    <tr>
+      <td>
+        <input type="checkbox" name="checkbox" value="<%=pet._id%>" onChange="this.form.submit()">
+      </td>
+      <td>
+        <p><%=pet.mypet.name%></p>
+      </td>
+      <td>
+        <p><%=pet.mypet.species%></p>
+      </td>
+      <td>
+        <p><%=pet.mypet.breed%></p>
+      </td>
+      <td>
+        <p><%=pet.mypet.dob%></p>
+      </td>
+      <td>
+        <p><%=pet.mypet.address%></p>
+      </td>
+    </tr>
+  </form>
+    <% }) %>
+  </table>
+  <form class="item" action="/" method="post">
+    <table>
+      <tr>
+        <input type="text" name="newName" placeholder="Enter pet Name" autocomplete="off">
+        <input type="text" name="newSpecies" placeholder="Enter pet Species" autocomplete="off">
+        <input type="text" name="newBreed" placeholder="Enter pet Breed" autocomplete="off">
+        <input type="date" name="newDob" placeholder="Enter DOB" autocomplete="off">
+        <input type="text" name="newAddress" placeholder="Enter pet Address" autocomplete="off">
+    </tr>
+    </table>
+        <button type="submit" name="pet">+</button>
+      </form>
+
+      <%- include("footer") -%>

@@ -1,0 +1,60 @@
+<%- include("header") -%>
+    <div class="box-1">
+
+    </div>
+
+    <div class="box-2">
+      <p class="owner">owner ID : from sighn up page </p>
+      <p class="owner">Name : from sighn up page</p>
+      <p class="owner">email : from sighn up page</p>
+      <table class="table">
+        <tr>
+          <th>id</th><th>name</th><th>species</th><th>Breed</th><th>DOB</th><th>address</th>
+        </tr>
+        <%  newListItems.forEach(function(pet){ %>
+          <%console.log(newListItems);%>
+        <form action="/delete" method="post">
+        <tr>
+          <td>
+            <input type="checkbox" name="checkbox" value="<%=pet._id%>" onChange="this.form.submit()">
+            <!-- <p><%=pet._id%></p> -->
+          </td>
+          <td>
+            <!-- <input type="text" name="checkbox" value="<%=pet.name%>" onChange="this.form.submit()"> -->
+            <p><%=pet.name%></p>
+          </td>
+          <td>
+            <!-- <input type="text" name="checkbox" value="<%=pet.species%>" onChange="this.form.submit()"> -->
+            <p><%=pet.species%></p>
+          </td>
+          <td>
+            <!-- <input type="text" name="checkbox" value="<%=pet.breed%>" onChange="this.form.submit()"> -->
+            <p><%=pet.breed%></p>
+          </td>
+          <td>
+            <!-- <input type="text" name="checkbox" value="<%=pet.dob%>" onChange="this.form.submit()"> -->
+            <p><%=pet.dob%></p>
+          </td>
+          <td>
+            <!-- <input type="text" name="checkbox" value=<%=pet.address%>"" onChange="this.form.submit()"> -->
+            <p><%=pet.address%></p>
+          </td>
+        </tr>
+      </form>
+        <% }) %>
+      </table>
+  <form class="item" action="/" method="post">
+    <table>
+      <tr>
+        <input class="ip" type="text" name="newName" placeholder="New Name" autocomplete="off">
+        <input class="ip" type="text" name="newSpecies" placeholder="New Species" autocomplete="off">
+        <input class="ip" type="text" name="newBreed" placeholder="New Breed" autocomplete="off">
+        <input class="ip" type="date" name="newDob" placeholder="New DOB" autocomplete="off">
+        <input class="ip" type="text" name="newAddress" placeholder="New Address" autocomplete="off">
+    </tr>
+    </table>
+        <button type="submit" name="pet">+</button>
+      </form>
+
+    </div>
+    <%- include("footer") -%>

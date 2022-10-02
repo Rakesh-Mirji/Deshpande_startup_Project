@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="height=device-height, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>PET CARE</title>
+  </head>
+  <body>
+    <div id="myNav" class="overlay">
+  <a style="cursor:pointer" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="http://localhost:3000/">SignIn/login</a>
+    <a href="#">Veternarian Appointment</a>
+    <a href="#">Product</a>
+    <a href="about.html">About Us</a>
+    <a href="ngo.html">NGO</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+    <div class="wall wall-1">
+    <nav>
+      <div class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></div>
+      <a href="index.html"class="icon"><img style="height: 100%;"src="images/logo.png" alt=""> </a>
+    </nav>
+    <div class="register"><p class="cpara2 hidden" >Go Ahead <br>Register your Pets Today </p> </div>
+    <div class="content1 c"><p class="cpara topHidden">With SuperPet you can get the best possible treatment for your pets </p>   </div>
+    <div class="content2 c"><img class="dogWalk topHidden" style="height:100%;width:100%;" src="images/Dog walking_Isometric.svg" alt="">  </div>
+  </div>
+
+    <div class="wall w2"><h1 class="know ">Know Your pet</h1>
+      <div class="container">
+      <div class="card bi1 hidden">
+        <div class="content">
+          <h2>01</h2>
+          <h3>Mammels</h3>
+          <p> Owning a small mammal is a big responsibility. If you decide that a small mammal is the right pet for you, it’s important to learn how to properly care for your pet.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card bi2 hidden">
+        <div class="content">
+          <h2>02</h2>
+          <h3>Birds</h3>
+          <p>Looking to adopt a friendly pet bird? Discover the most affectionate and loving species, from tiny budgies to large hyacinth macaws.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card p2 bi3 hidden">
+        <div class="content">
+          <h2>03</h2>
+          <h3>Reptiles</h3>
+          <p>There are lots of scaly pets out there, but what are the overall best pet reptiles? Check out our favorite snakes, lizards, and turtles!</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card p2 bi4 hidden">
+        <div class="content">
+          <h2>04</h2>
+          <h3>Aquatic</h3>
+          <p>Check out these photos of fish and other aquarium dwellers, as well as accompanying fun facts, to convince you sea creatures can be cute, too!</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="wall w3">
+      <img class="mySlides" src="images/dogVet.jpg" >
+             <img class="mySlides" src="images/owl.jpg">
+             <img class="mySlides" src="images/mobileVetClinic.jpg">
+             <img class="mySlides" src="images/Hospital-1.jpg">
+             <img class="mySlides" src="images/undraw_doctors_hwty.svg">
+
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <p class="vet hidden">Veterinarians, or vets” for short, are doctors for pets, zoo animals, horses, livestock and other animals. Like physicians, vets care for their sick and injured patients. Veterinarians may also perform surgery and prescribe medications to animals that require it. In addition, vets are responsible for the animal’s preventative care, like giving checkups and administering vaccinations.</p>
+    </div><br><br><br>
+
+     <footer>
+         <div class="footer-content">
+          <h3 style="color:white"> sample</h3>
+          <p style="color:white"> sample text</p>
+          <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+         </ul>
+         </div>
+         <div class="footer-bootom">
+            <p class="ss"style="color:white">copyright &copy;2021 <a href="#"style="color:white">sample</a> </p>
+          </div>
+    </footer>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "20%";
+        document.getElementById("myNav").style.transition = "all 1s";
+        document.body.style.backgroundColor = "rgba(0,0,100,0.5)";
+
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+        document.body.style.backgroundColor = "rgba(179, 197, 223,.4)";
+      }
+
+      let slideIndex = 0;
+               showSlides();
+               function showSlides() {
+                 let i;
+                 let slides = document.getElementsByClassName("mySlides");
+                 let dots = document.getElementsByClassName("dot");
+                 for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+                 }
+                 slideIndex++;
+                 if (slideIndex > slides.length) {slideIndex = 1}
+                 for (i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace(" active", "");
+                 }
+                 slides[slideIndex-1].style.display = "block";
+                 dots[slideIndex-1].className += " active";
+                 setTimeout(showSlides, 2000); // Change image every 2 seconds
+               }
+
+               const observer = new IntersectionObserver((entries) =>{
+                 entries.forEach((entry)=> {
+                   console.log(entry);
+                   if(entry.isIntersecting){
+                     entry.target.classList.add('show');
+                   }else{
+                     entry.target.classList.remove('show');
+                   }
+                 });
+               });
+
+               const hiddenElements = document.querySelectorAll('.hidden');
+               const topHiddenElements = document.querySelectorAll('.topHidden');
+
+               hiddenElements.forEach((el) => observer.observe(el));
+               topHiddenElements.forEach((el) => observer.observe(el));
+
+    </script>
+  </body>
+</html>

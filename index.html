@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="height=device-height, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PET CARE</title>
+  </head>
+  <body>
+    <div id="myNav" class="overlay">
+  <a style="cursor:pointer" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">SignIn/login</a>
+    <a href="#">Veternarian Appointment</a>
+    <a href="#">Product</a>
+    <a href="about.html">About Us</a>
+    <a href="ngo.html">NGO</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+    <div class="wall wall-1">
+    <nav>
+      <a href="index.html"class="icon"><img style="height: 100%;"src="images/logo.png" alt=""> </a>
+      <div class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></div>
+    </nav>
+    <div class="register"><p class="cpara2" >Go Ahead <br>Retister your Pets Today </p> </div>
+    <div class="content1 c"><div class="child1 cc"><p class="cpara" style="text-align: left;">All his life he tried to be a good person. Many times, however, <br>he failed. For after all, he <br>was only human. He <br>wasn’t a dog</p>  </div>   </div>
+    <div class="content2 c"><div class="child2 cc"> <p class="cpara">Animals have come to mean so much in our lives. We live in a fragmented and disconnected culture. Politics <br> are ugly, religion is struggling, technology is stressful,<br>  and the economy is <br> unfortunate. </p> </div>  </div>
+  </div>
+
+    <div class="wall w2"><h1 class="know">Know Your pet</h1>
+      <div class="container">
+      <div class="card bi1">
+        <div class="content">
+          <h2>01</h2>
+          <h3>Mammels</h3>
+          <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card bi2">
+        <div class="content">
+          <h2>02</h2>
+          <h3>Birds</h3>
+          <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card p2 bi3">
+        <div class="content">
+          <h2>03</h2>
+          <h3>Reptiles</h3>
+          <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card p2 bi4">
+        <div class="content">
+          <h2>04</h2>
+          <h3>Aquatic</h3>
+          <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read" href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="wall">
+      <img class="mySlides" src="images/1.jpg" >
+             <img class="mySlides" src="images/2.png">
+             <img class="mySlides" src="images/3.webp">
+             <img class="mySlides" src="images/4.webp">
+             <img class="mySlides" src="images/undraw_doctors_hwty.svg">
+
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+             <span class="dot"></span>
+    </div>
+
+     <footer>
+         <div class="footer-content">
+          <h3 style="color:white"> sample</h3>
+          <p style="color:white"> sample text</p>
+          <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+         </ul>
+         </div>
+         <div class="footer-bootom">
+            <p class="ss"style="color:white">copyright &copy;2021 <a href="#"style="color:white">sample</a> </p>
+         </div>
+    </footer>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+
+      let slideIndex = 0;
+               showSlides();
+               function showSlides() {
+                 let i;
+                 let slides = document.getElementsByClassName("mySlides");
+                 let dots = document.getElementsByClassName("dot");
+                 for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+                 }
+                 slideIndex++;
+                 if (slideIndex > slides.length) {slideIndex = 1}
+                 for (i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace(" active", "");
+                 }
+                 slides[slideIndex-1].style.display = "block";
+                 dots[slideIndex-1].className += " active";
+                 setTimeout(showSlides, 2000); // Change image every 2 seconds
+               }
+    </script>
+  </body>
+</html>

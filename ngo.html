@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Pet Care</title>
+    <style media="screen">
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family:  'Roboto', sans-serif;
+        /* border:2px solid black; */
+      }
+      body{
+        height: 160vh;background: linear-gradient(180deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+        font-family:  'Roboto', sans-serif;
+
+      }
+      .ngoSlides{
+        margin:1% 4%;
+        padding: .4%;
+        box-shadow:20px 20px 50px rgba(0,0,0,0.2),-20px -20px 50px rgba(0,0,0,0.1);
+        border-radius: 50px;
+        height: 50%;
+        width:60%;
+        object-fit: contain;
+        background:rgb(235, 244, 245) ;
+      }
+      .act{
+        height: 36%;
+      }
+      .act div{
+        display: inline-flex;
+        width: 33%;
+        height: 45%;
+        border:2px solid  rgba(0,0,100,0.5);
+        padding:1%;
+        margin-top:3px;
+
+      }
+      .feedback{
+        height: 3%;
+        width: 20%;
+        position:relative;
+        top:30%; left:65%;
+        border-radius: 15px;
+        font-size: 20px;
+      }
+      .feed{
+        text-decoration: none;
+        font-weight: 900;
+        padding:1% 2%;
+        border:2px solid black;
+        border-radius: 50px;
+        position: relative;
+        top:35%; left:80%;
+        background-color: orange;
+    }
+    .feed:hover{
+      background-color: darkorange;
+    }
+    .profile{
+      background: radial-gradient(  rgb(235, 244, 245) , rgb(179, 200, 233));
+    }
+    .ngoImages{
+      height:100%;
+      width:100%;
+      object-fit: contain;
+    }
+
+      @media screen and (max-width: 1024px) {
+        .act div{width:49%;height: 190px}
+        body{height: 200vh}
+        .ngoSlides{height: 30%}
+        .feed{top:20%; left:80%;}
+}
+@media screen and (max-width: 450px) {
+  .ngoSlides{width:90%; margin-bottom: 10%;}
+  .feed{top:34%; left:60%;}
+  .feedback{top:34%; left:0; width:35%}
+  .profile:nth-child(2){border-radius:0 50px 0 0}
+  .profile:nth-child(5){border-radius:0 0 0 50px}
+}
+    </style>
+  </head>
+  <body>
+     <h1 style="text-align:center; font-size:80px">NGO</h1>
+     <button class="feed" type="stbmit" name="button">feedback</button>
+     <!-- <a class="feed"href="#">feedback </a> -->
+     <input class="feedback" type="text" name="feedback" value="">
+     <img class="ngoSlides" src="	https://www.animalrahat.com/wp-content/uploads/2022/09/Splash-AR-SANCTUARY-2022-09.jpg" alt="images/dogspot.png" >
+     <img class="ngoSlides"src="https://www.karmafoundation.ngo/Images/Gallery/2020-04-15/SAVE_20200414_244942%202020-04-15_02-08-17-PM.jpg" alt="images/cupa-logo-transparent-backgrou.png">
+     <img class="ngoSlides" src="images/Screenshot (18).png" alt="images/people4animals.png">
+     <img class="ngoSlides" src="images/Screenshot (17).png" alt="images/sanjaygandhianimalcarecentre-logo.jpg">
+     <img class="ngoSlides" src="https://adoptacow.in/wp-content/uploads/2015/12/AdoptACowHeader.jpg" alt="images/Screenshot 2022-09-23 171432.png">
+
+     <span class="dot"></span>
+     <span class="dot"></span>
+     <span class="dot"></span>
+     <span class="dot"></span>
+     <span class="dot"></span>
+
+     <div class="act">
+       <div style="border-radius:50px 0 0 0;" class="profile"><a href="https://www.dogspot.in/"><img class="ngoImages" src="images/dogspot.png" ></a> </div>
+       <div class="profile"><a href="https://www.karmafoundation.ngo/"> <img class="ngoImages" src="images/karma_logo.png" ></a> </div>
+       <div style="border-radius:0 50px 0 0;" class="profile"><a href="https://peopleforanimalsindia.org/"> <img class="ngoImages" src="images/people4animals.png"></a> </div>
+       <div style="border-radius:0 0 0 50px;" class="profile"><a href="http://sanjaygandhianimalcarecentre.org"> <img class="ngoImages" src="images/sanjaygandhianimalcarecentre-logo.jpg"></a> </div>
+       <div class="profile"><a href="https://www.animalrahat.com/"> <img class="ngoImages" src="images/animalRahat.png"></a></div>
+       <div style="border-radius:0 0 50px 0;" class="profile"><a href="https://adoptacow.in/"> <img class="ngoImages" src="images/Screenshot 2022-09-23 171432.png"></a> </div>
+     </div>
+    <script type="text/javascript">
+    let slideIndex = 0;
+             showSlides();
+             function showSlides() {
+               let i;
+               let slides = document.getElementsByClassName("ngoSlides");
+               let dots = document.getElementsByClassName("dot");
+               for (i = 0; i < slides.length; i++) {
+                 slides[i].style.display = "none";
+               }
+               slideIndex++;
+               if (slideIndex > slides.length) {slideIndex = 1}
+               for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" active", "");
+               }
+               slides[slideIndex-1].style.display = "block";
+               dots[slideIndex-1].className += " active";
+               setTimeout(showSlides, 2000); // Change image every 2 seconds
+             }
+    </script>
+  </body>
+</html>
